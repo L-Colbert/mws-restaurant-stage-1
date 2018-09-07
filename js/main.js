@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
+// registration of the service worker
+window.addEventListener('load',() => {
+  if(!navigator.serviceWorker) return;
+  navigator.serviceWorker.register('/sw.js')
+  .then(() => {console.log('registered it!');})
+  .catch(() => {console.log( `Registeration failed @ ${self.scope}`);})
+})
+
 /**
  * Fetch all neighborhoods and set their HTML.
  */

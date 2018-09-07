@@ -6,9 +6,6 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {  
   initMap();
-  document.addListener('tilesloaded', ()=> {
-    document.querySelector("#map").tabIndex = '-1';
-  });
 });
 /**
  * Initialize leaflet map
@@ -89,9 +86,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   const altStr = `image of ${restaurant.name} restaurant`;
-
+  
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  //adds alt tag to image
   image.setAttribute('alt', altStr);
 
 
