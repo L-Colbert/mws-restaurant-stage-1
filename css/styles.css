@@ -34,7 +34,8 @@ ul, li {
 }
 a {
 	color: #FFD5A3;
-	text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 a:hover, a:focus {
 	color: #16527E;
@@ -157,7 +158,7 @@ nav h1 a {
   letter-spacing: 0;
   margin: 2px;
   padding: 0;
-  width: 153px;
+  width: auto;
 }
 
 /* ====================== Restaurant Listing ====================== */
